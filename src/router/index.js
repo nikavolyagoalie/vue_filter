@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Filters from '@/views/Filters.vue'
-import MultiSelect from '@/views/MultiSelect.vue'
-import Select from '@/views/Select.vue'
-import PriceSlider from '@/views/PriceSlider.vue'
+import MultiSelect from '@/components/MultiSelect.vue'
+import Select from '@/components/Select.vue'
+import PriceSlider from '@/components/PriceSlider.vue'
+import PostComp from '@/components/PostComp.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: '/price',
     name: 'PriceSlider',
     component: PriceSlider,
+  },
+  {
+    path: '/postcomp',
+    name: 'PostComp',
+    component: PostComp,
   }
 ]
 

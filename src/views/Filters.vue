@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Prices from "./PriceSlider.vue";
-import MultiSelect from "./MultiSelect.vue";
-import SelectTypes from "./Select.vue";
+import Prices from "@/components/PriceSlider.vue";
+import MultiSelect from "@/components/MultiSelect.vue";
+import SelectTypes from "@/components/Select.vue";
 
 export default {
   components: {

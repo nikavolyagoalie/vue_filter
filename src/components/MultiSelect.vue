@@ -1,5 +1,6 @@
 <template>
   <div class="select">
+    {{ articleId }}
     <div class="select__fileld" @click="openList">
       <div class="text" v-if="checkedTypes.length != 0">
         {{ selectedRoomms }}
@@ -37,6 +38,7 @@
             :id="room"
             :value="room"
             v-model="checkedTypes"
+            @change="onChange"
           />
           <div class="checkbox__custom">
             <div class="check_icon"></div>
@@ -58,7 +60,13 @@ export default {
     return {
       roomName: "комн",
       text: "Комнатность",
+      postBody: {
+        rooms: this.rooms,
+      },
     };
+  },
+
+  methods: {
   },
 
   computed: {
@@ -96,7 +104,6 @@ export default {
   padding: 8px;
   justify-content: space-between;
   margin: 5px;
-
 }
 
 .select__list {
@@ -143,7 +150,7 @@ export default {
 }
 
 .checkbox:has(.checkbox__input:checked + .checkbox__custom) {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .check_icon {
@@ -152,6 +159,4 @@ export default {
   width: 12px;
   height: 9px;
 }
-
-
 </style>

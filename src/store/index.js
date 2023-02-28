@@ -58,6 +58,6 @@ export default createStore({
       } catch (e) {
         console.log(e)
       }
-    }
+    },
   }
 })
